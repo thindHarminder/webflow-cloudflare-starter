@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "dev": "wrangler dev src/index.ts --port=8779",
+    "deploy": "wrangler deploy --minify src/index.ts",
+    "db:build": "drizzle-kit generate",
+    "db:up": "drizzle-kit up"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.2.1",
+    "@lucia-auth/adapter-sqlite": "^3.0.1",
+    "@noble/hashes": "^1.4.0",
+    "@paralleldrive/cuid2": "^2.2.2",
+    "better-sqlite3": "^9.6.0",
+    "drizzle-orm": "^0.30.10",
+    "hono": "^4.3.2",
+    "lucia": "^3.2.0",
+    "stripe": "^15.7.0",
+    "zod": "^3.23.6"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240403.0",
+    "drizzle-kit": "^0.21.1",
+    "wrangler": "^3.47.0"
+  }
+}
